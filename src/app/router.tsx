@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import { AppShell } from "./shell/AppShell";
 import { DashboardPage } from "../pages/DashboardPage";
 import { ReihungstestPage } from "../pages/ReihungstestPage";
@@ -7,7 +7,7 @@ import { HabitsPage } from "../pages/HabitsPage";
 import { JournalPage } from "../pages/JournalPage";
 import { SettingsPage } from "../pages/SettingsPage";
 
-export const router = createBrowserRouter(
+export const router = createHashRouter(
   [
     {
       path: "/",
@@ -22,6 +22,5 @@ export const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: import.meta.env.BASE_URL },
 );
 
