@@ -7,18 +7,21 @@ import { HabitsPage } from "../pages/HabitsPage";
 import { JournalPage } from "../pages/JournalPage";
 import { SettingsPage } from "../pages/SettingsPage";
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppShell />,
-    children: [
-      { index: true, element: <DashboardPage /> },
-      { path: "reihungstest", element: <ReihungstestPage /> },
-      { path: "study-prep", element: <StudyPrepPage /> },
-      { path: "habits", element: <HabitsPage /> },
-      { path: "journal", element: <JournalPage /> },
-      { path: "settings", element: <SettingsPage /> },
-    ],
-  },
-]);
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <AppShell />,
+      children: [
+        { index: true, element: <DashboardPage /> },
+        { path: "reihungstest", element: <ReihungstestPage /> },
+        { path: "study-prep", element: <StudyPrepPage /> },
+        { path: "habits", element: <HabitsPage /> },
+        { path: "journal", element: <JournalPage /> },
+        { path: "settings", element: <SettingsPage /> },
+      ],
+    },
+  ],
+  { basename: import.meta.env.BASE_URL },
+);
 
